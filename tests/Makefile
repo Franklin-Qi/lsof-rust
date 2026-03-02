@@ -6,7 +6,7 @@
 # $Id: Makefile,v 1.17 2005/05/17 00:40:53 abe Exp abe $
 
 DEBUG=
-CFLAGS=	${DEBUG} -I. -I..
+CFLAGS=	${DEBUG} -I. -I.. -I../include
 
 HDR=	LsofTest.h
 
@@ -19,7 +19,7 @@ LIBOBJ=	${LTOBJ}
 
 BASTST=	LTbasic
 STDTST=	LTnlink LTsock LTszoff LTunix
-OPTTST=	LTbigf LTdnlc LTlock LTnfs 
+OPTTST=	LTbigf LTdnlc LTlock LTnfs
 
 all:	${CKTSTDB} ${BASTST} ${STDTST} FRC
 	@./${CKTSTDB}; xv=$$?; \
